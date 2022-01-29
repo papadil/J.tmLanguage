@@ -12,8 +12,6 @@
 		<string>end\.</string>
 		<key>increaseIndentPattern</key>
 		<string>if\.|else\.|elseif\.|while\.|for\.|for\_[a-z]+\.|whilst\.|do\.</string>
-		<key>indentNextLinePattern</key>
-		<string>if\.|else\.|elseif\.|while\.|for\.|for\_[a-z]+\.|whilst\.|do\.</string>
 		<key>unIndentedLinePattern</key>
 		<string>\}\}</string>
 	</dict>
