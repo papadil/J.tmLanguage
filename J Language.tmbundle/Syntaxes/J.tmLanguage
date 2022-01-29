@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>do\.|end\.|\s+echo\s+</string>
+			<string>do\.|end\.|\s*echo\s+</string>
 			<key>name</key>
 			<string>keyword.other.j</string>
 		</dict>
