@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Typing Pairs</string>
+	<string>TypingPairs</string>
 	<key>scope</key>
-	<string>source.j source.function.j source.block.j source.function.j</string>
+	<string>*</string>
 	<key>settings</key>
 	<dict>
 		<key>smartTypingPairs</key>
