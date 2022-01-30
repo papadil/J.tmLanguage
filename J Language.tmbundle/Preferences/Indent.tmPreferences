@@ -9,7 +9,7 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>end\.|\}\}</string>
+		<string>\s*(end\.|\}\})\s*$</string>
 		<key>increaseIndentPattern</key>
 		<string>(if\.|for\.|for_[a-z]+\.|else\.|elseif\.|while\.|whilst\.).+do\.\s*$</string>
 	</dict>
