@@ -12,13 +12,13 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>if\.|else\.|elseif\.|while\.|for\.|for\_[a-z]+\.|whilst\.|continue.|break\.|return\.|do\.|end\.|return\.</string>
+			<string>\b(if\.|else\.|elseif\.|while\.|for\.|for\_[a-z]+\.|whilst\.|continue\.|break\.|return\.|do\.|end\.|return\.)\b</string>
 			<key>name</key>
 			<string>keyword.control.j</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>([aAibCeEfFHIjLMor]\.|[aiFLpqsSuxZ]:|[Fp][..]|[F][.:]{2})</string>
+			<string>([aAibCeEfFHIjLMor]\.|[aiFLpqsSuxZ]:|[Fp]\.{1,2}|[F][.:]{2})</string>
 			<key>name</key>
 			<string>support.function.j</string>
 		</dict>
@@ -30,16 +30,26 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>do\.|end\.|\s*echo\s+</string>
+			<string>\b(echo|smoutput)\b|</string>
 			<key>name</key>
 			<string>keyword.other.j</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\{\{[)]n)\s*</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)*\s*(=[.:])*\s*(\{\{\)n).*$</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.j</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.j</string>
+				</dict>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.operator.j</string>
@@ -48,9 +58,9 @@
 			<key>contentName</key>
 			<string>string.unquoted.block.j</string>
 			<key>end</key>
-			<string>^(\}\})</string>
+			<string>^()()(\}\})</string>
 			<key>name</key>
-			<string>source.function.j</string>
+			<string>source.noun.j</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -89,7 +99,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(\{\{)</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(\{\{)(?![m,d,v,a,c,n])</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -130,7 +140,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*([0-4,13]\s+:\s+0)</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*([0-4,13]\s+:\s*0)</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -236,7 +246,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])</string>
+			<string>\b([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(?![0-4,13]|\{\{)</string>
 			<key>name</key>
 			<string>meta.expression.j</string>
 		</dict>
@@ -307,8 +317,6 @@
 		</dict>
 	</array>
 	<key>scope</key>
-	<string>source.j</string>
-	<key>scopeName</key>
 	<string>source.j</string>
 	<key>uuid</key>
 	<string>7E6B46D7-E13D-4100-8C4F-FFC9FB766921</string>
