@@ -12,7 +12,13 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(if\.|else\.|elseif\.|while\.|for\.|for\_[a-z]+\.|whilst\.|continue\.|break\.|return\.|do\.|end\.|return\.)\b</string>
+			<string>(if|else|elseif|while|for|for_[a-z]+|whilst|do|end)\.</string>
+			<key>name</key>
+			<string>keyword.control.j</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(continue|break|return)\.</string>
 			<key>name</key>
 			<string>keyword.control.j</string>
 		</dict>
@@ -305,7 +311,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[a-zA-Z][a-zA-Z0-9]*</string>
+			<string>[a-zA-Z][a-zA-Z0-9]*(?!\.)</string>
 			<key>name</key>
 			<string>variable.language.j</string>
 		</dict>
