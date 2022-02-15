@@ -42,25 +42,61 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>NB\..*$</string>
+			<string>^\s*NB\.\s+.+$</string>
 			<key>name</key>
 			<string>comment.line.j</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(NB\.)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.block.j</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>comment.block.j</string>
+			<key>end</key>
+			<string>$</string>
+			<key>name</key>
+			<string>comment.block.j</string>
+		</dict>
+		<dict>
 			<key>match</key>
-			<string>([*\{\}\-+&amp;#$%@!~`^\[\]|,\/\\;"?&lt;&gt;=][.:]{0,2}(?!\)n|\{)|_\.|_:)</string>
+			<string>=(\.|:)</string>
+			<key>name</key>
+			<string>meta.definition.j</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>([*\{\}\-+&amp;#$%@!~`^\[\]\|\,\/\\;"?&lt;&gt;_]\.| \.)</string>
 			<key>name</key>
 			<string>keyword.operator.j</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(_|_?[0-9]+(\.[0-9]+)?j?_?[0-9]*(\.[0-9]+)?)\b</string>
+			<string>([*\{\}\-+&amp;#$%@!~`^\[\]\|\,\/\\;"?&lt;&gt;]:)</string>
+			<key>name</key>
+			<string>keyword.operator.j</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>([*\{\}\-+&amp;#$%@!~`^\[\]\|\,\/\\;"?&lt;&gt;])</string>
+			<key>name</key>
+			<string>keyword.operator.j</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(_|_?[0-9]+(\.[0-9]+)?j?_?[0-9]*(\.[0-9]+)?)x?\b</string>
 			<key>name</key>
 			<string>constant.numeric.j</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*)*\s*(=[.:])*\s*(\{\{\)n).*$</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(\{\{\)n).*$</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -83,6 +119,24 @@
 			<string>string.unquoted.block.j</string>
 			<key>end</key>
 			<string>.*()()(\}\}).*$</string>
+			<key>name</key>
+			<string>source.noun.j</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(\{\{\)n)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.j</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>string.unquoted.block.j</string>
+			<key>end</key>
+			<string>(\}\})</string>
 			<key>name</key>
 			<string>source.noun.j</string>
 		</dict>
