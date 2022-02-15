@@ -72,7 +72,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>([*\{\}\-+&amp;#$%@!~`^\[\]\|\,\/\\;"?&lt;&gt;_]\.| \.)</string>
+			<string>([*\{\}\-+&amp;#$%@!~`^\[\]\|\,\/\\;"?&lt;&gt;_]\.|\s+\.)</string>
 			<key>name</key>
 			<string>keyword.operator.j</string>
 		</dict>
@@ -107,7 +107,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.j</string>
+					<string>meta.definition.j</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -142,7 +142,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(\{\{\)[m,d,v,a,c])</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(\{\{)(\)[m,d,v,a,c])*</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -153,9 +153,14 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.j</string>
+					<string>meta.definition.j</string>
 				</dict>
 				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.j</string>
+				</dict>
+				<key>4</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.operator.j</string>
@@ -164,42 +169,7 @@
 			<key>contentName</key>
 			<string>source.function.j</string>
 			<key>end</key>
-			<string>^()(\}\})</string>
-			<key>name</key>
-			<string>source.function.j</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(\{\{)(?![m,d,v,a,c,n])</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.j</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.j</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.j</string>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>source.function.j</string>
-			<key>end</key>
-			<string>^()(\}\})</string>
+			<string>^()()(\}\})</string>
 			<key>name</key>
 			<string>source.function.j</string>
 			<key>patterns</key>
@@ -223,7 +193,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.j</string>
+					<string>meta.definition.j</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -234,7 +204,7 @@
 			<key>contentName</key>
 			<string>source.function.j</string>
 			<key>end</key>
-			<string>^()(\))</string>
+			<string>^()()(\))</string>
 			<key>name</key>
 			<string>source.function.j</string>
 			<key>patterns</key>
@@ -256,7 +226,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.j</string>
+					<string>meta.definition.j</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -292,7 +262,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.j</string>
+					<string>meta.definition.j</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -308,7 +278,7 @@
 			<key>match</key>
 			<string>\b([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(?![0-4,13]|\{\{)</string>
 			<key>name</key>
-			<string>source.function.j</string>
+			<string>meta.expression.j</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -359,7 +329,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*?)\s*([^a-zA-Z]*?)\s+([a-zA-Z][a-zA-Z0-9]+?)\s+($|NB\.)</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*?)\s*([^a-zA-Z]*?)\s+([a-zA-Z][a-zA-Z0-9]+?)\s+(NB\..*$)*$</string>
 			<key>name</key>
 			<string>meta.expression.j</string>
 		</dict>
