@@ -346,8 +346,6 @@
 			<string>string.quoted.single.j</string>
 		</dict>
 	</array>
-	<key>scope</key>
-	<string>source.j</string>
 	<key>scopeName</key>
 	<string>source.j</string>
 	<key>uuid</key>
