@@ -42,27 +42,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^\s*NB\.\s+.+$</string>
+			<string>NB\.\s*.+$</string>
 			<key>name</key>
 			<string>comment.line.j</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(NB\.)</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>comment.block.j</string>
-				</dict>
-			</dict>
-			<key>contentName</key>
-			<string>comment.block.j</string>
-			<key>end</key>
-			<string>$</string>
-			<key>name</key>
-			<string>comment.block.j</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -326,6 +308,11 @@
 				<dict>
 					<key>name</key>
 					<string>variable.language.j</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.j</string>
 				</dict>
 			</dict>
 			<key>match</key>
