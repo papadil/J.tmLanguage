@@ -72,7 +72,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(_|_?[0-9]+(\.[0-9]+)?j?_?[0-9]*(\.[0-9]+)?)x?\b</string>
+			<string>(_|_?[0-9]+(\.[0-9]+)?j?_?[0-9]*(\.[0-9]+)?)x?\b</string>
 			<key>name</key>
 			<string>constant.numeric.j</string>
 		</dict>
@@ -258,7 +258,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(?![0-4,13]|\{\{)</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)\s*(=[.:])\s*(?![0-4,13]|\{\{)</string>
 			<key>name</key>
 			<string>meta.expression.j</string>
 		</dict>
@@ -285,9 +285,14 @@
 					<key>name</key>
 					<string>variable.language.j</string>
 				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.j</string>
+				</dict>
 			</dict>
 			<key>match</key>
-			<string>([a-zA-Z][a-zA-Z0-9]*)\s+([a-zA-Z][a-zA-Z0-9]+)\s*([^a-zA-Z]*?)\s+([a-zA-Z][a-zA-Z0-9]*)</string>
+			<string>([a-zA-Z][a-zA-Z0-9]*)\s+([a-zA-Z][a-zA-Z0-9]+)\s*([^a-zA-Z]*?)\s+([a-zA-Z][a-zA-Z0-9]*)\s+(NB\..*$)*$</string>
 			<key>name</key>
 			<string>meta.expression.j</string>
 		</dict>
