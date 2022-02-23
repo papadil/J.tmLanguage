@@ -18,7 +18,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(continue|break|return)\.</string>
+			<string>(continue|break|return|assert)\.</string>
 			<key>name</key>
 			<string>keyword.control.j</string>
 		</dict>
