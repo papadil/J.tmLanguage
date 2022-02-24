@@ -2,14 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>isDisabled</key>
-	<true/>
 	<key>name</key>
 	<string>Indent</string>
 	<key>scope</key>
 	<string>source.j</string>
 	<key>settings</key>
-	<dict/>
+	<dict>
+		<key>unIndentedLinePattern</key>
+		<string>^.*$</string>
+	</dict>
 	<key>uuid</key>
 	<string>705F8E2A-522E-435E-A0D3-49168A19DA04</string>
 </dict>
