@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>NB\.\s*.+$</string>
+			<string>NB\..+$</string>
 			<key>name</key>
 			<string>comment.line.j</string>
 		</dict>
