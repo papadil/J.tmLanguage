@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Indent</string>
 	<key>scope</key>
-	<string>source.j</string>
+	<string>source.j,source.function.j</string>
 	<key>settings</key>
 	<dict>
 		<key>unIndentedLinePattern</key>
