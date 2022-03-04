@@ -8,10 +8,8 @@
 	<string>source.j,source.function.j</string>
 	<key>settings</key>
 	<dict>
-		<key>indentNextLinePattern</key>
-		<string>^(\t|\s)+</string>
 		<key>unIndentedLinePattern</key>
-		<string>^(?&lt;!\t|\s).*$</string>
+		<string>^(?&lt;!\s).*$</string>
 	</dict>
 	<key>uuid</key>
 	<string>705F8E2A-522E-435E-A0D3-49168A19DA04</string>
