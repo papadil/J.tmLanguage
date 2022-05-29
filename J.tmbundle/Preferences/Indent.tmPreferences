@@ -8,8 +8,15 @@
 	<string>source.j,source.function.j</string>
 	<key>settings</key>
 	<dict>
+		<key>decreaseIndentPattern</key>
+		<string>(?x)
+    ^ (.*?)? (end\.) \s* $</string>
+		<key>increaseIndentPattern</key>
+		<string>(?x)
+    (   (do\.|else\.) .*? (?!end\.) \s* $
+    )</string>
 		<key>unIndentedLinePattern</key>
-		<string>^.+$</string>
+		<string>^\s*$</string>
 	</dict>
 	<key>uuid</key>
 	<string>705F8E2A-522E-435E-A0D3-49168A19DA04</string>
